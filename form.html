@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="form.css">
+    </head>      
+<body>
+<form class="container">
+    <h1>Add New Laptop</h1>
+    <div class="flex">
+        <div class="flex-inner-3">
+            <label>Serial Number:</label>
+            <input type="number" id="serialnum" name="serialnum" required>
+        </div>
+        <div class="flex-inner-3">
+            <label>Original Donor:</label>
+            <input type="text" id="donor" name="donor" required>
+        </div>
+        <div class="flex-inner-3">
+            <label>Status:</label>
+            <select id="status" name="status" required>
+                <option value="">Please choose an option</option>
+                <option value="unprocessed">Unprocessed</option>
+                <option value="ready">Ready</option>
+                <option value="donated">Donated</option>
+                <option value="unusable">Unusable</option>
+                <option value="sold">Sold</option>
+            </select>
+        </div>
+    </div>
+    <div class="flex">
+        <div class="flex-inner-3">
+    <!--conditional field if the user selects ready, donated, or sold for status-->
+    <label>If you selected Ready, Donated, or Sold for the status, please enter the Value:</label>
+    <input type="number" id="value" name="value" required>
+    <!--end conditional-->
+        </div>
+        <div class="flex-inner-3">
+            <label>Model:</label>
+            <input type="text" id="model" name="model">
+        </div>
+        <div class="flex-inner-3">
+            <label>Screen Size(in inches):</label>
+            <input type="number" id="screensize" name="screensize">
+        </div>
+    </div>
+    <div class="flex">
+        <div class="flex-inner-3">
+            <label>CPU Type:</label>
+            <input type="text" id="cputype" name="cputype">
+        </div>
+        <div class="flex-inner-3">
+            <label>Memory(in GB):</label>
+            <input type="number" id="memory" name="memory">
+        </div>
+        <div class="flex-inner-3">
+            <label>Disk Size:</label>
+            <input type="text" id="disksize" name="disksize">
+        </div>
+    </div>
+    <div class="flex">
+        <div class="flex-inner-4">
+            <label>Charger Included?:</label>
+            <select id="charger" name="charger">
+                <option value="">Please choose an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="flex-inner-4">
+            <!--conditionalj if chargerincluded=="yes"-->
+            <label>If yes, Charger Type:</label>
+            <input type="text" id="chargertype" name="chargertype">
+        </div>
+        <div class="flex-inner-4">
+            <!--conditionalj if status=="sold"-->
+            <label>Sold Price:</label>
+            <input type="number" id="soldprice" name="soldprice">
+        </div>
+        <div class="flex-inner-4">
+            <label>Date donated:</label>
+            <input type="date" id="datedonated" name="datedonated">
+        </div>
+    </div>
+    <div class="notes">
+        <label>Notes:</label>
+        <textarea id="notes" name="notes" rows="3" cols="30"></textarea>
+    </div>
+    <div class="flex-button">
+        <button>Cancel</button>
+        <button>Save</button>
+    </div>
+
+</form>
+
+
+</body>
+</html>
